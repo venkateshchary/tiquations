@@ -31,12 +31,15 @@ Version 1.2.2
 #Quadratic formula solver
 def quadratic(num1,num2,num3):
     """Usage: (NUMx^2)=num1 (NUMx)=num2 (NUM)=num3 Example: 3x^2+5x-2 num1=3, num2=5, num3=-2"""
-    last=math.sqrt(num2**2 - 4 * (num1) * (num3))
-    result1 = -num2 + last
-    ans1 = (result1 / (2 * num1))
-    result2 = -num2 - last
-    ans2 = (result2 / (2 * num1))
-    return ans1, ans2
+    if num1 == 0:
+        return "division by zero is not possible"
+    else:
+        last=math.sqrt(num2**2 - 4 * (num1) * (num3))
+        result1 = -num2 + last
+        ans1 = (result1 / (2 * num1))
+        result2 = -num2 - last
+        ans2 = (result2 / (2 * num1))
+        return ans1, ans2
 
 def pythagoras(a=None, b=None, c=None):
     """Given two sides of a triangle abc, solve for the missing side.
